@@ -1,0 +1,19 @@
+{
+  "name": "wechat-lanson-mini-app",
+  "version": "1.0.0",
+  "description": "朗盛国际微信小程序",
+  "main": "app.js",
+  "dependencies": {
+    "@antv/wx-f2": "^2.1.0",
+    "@vant/weapp": "^1.4.0",
+    "apifm-wxapi": "^3.4.0",
+    "jwt-decode": "^2.2.0",
+    "wxa-plugin-canvas": "^1.1.12",
+    "wxbarcode": "^1.0.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": []
+}

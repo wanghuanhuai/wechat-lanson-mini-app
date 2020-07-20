@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "保存出租信息",
+  "usingComponents": {
+    "van-switch": "../../miniprogram_npm/@vant/weapp/switch",
+    "van-field": "../../miniprogram_npm/@vant/weapp/field",
+    "van-uploader": "../../miniprogram_npm/@vant/weapp/uploader",
+    "van-button": "../../miniprogram_npm/@vant/weapp/button"
+  }
+}

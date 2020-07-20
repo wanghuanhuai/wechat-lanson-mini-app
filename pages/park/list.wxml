@@ -1,0 +1,80 @@
+<van-sticky>
+      <view class="header">
+        <view class="search">
+          <input type="text" placeholder="输入搜索关键词" value="{{searchName}}" bindinput="bindinput" bindconfirm="bindconfirm"></input>
+          <image src="/images/icon/search.svg"></image>
+        </view>
+      </view>
+      <view class="line"></view>
+  <view >
+      <van-dropdown-menu>
+          <van-dropdown-item value="{{ typeValue }}" options="{{ typeOption }}" bind:change="onTypeValueChange"/>
+          <van-dropdown-item value="{{ sortValue }}" options="{{ sortOption }}" bind:change="onSortValueChange"/>
+        </van-dropdown-menu>
+  </view>
+</van-sticky>
+<block wx:if="{{ total>0}} ">
+  <view  wx:for="{{list}}" wx:key="id">
+    <!-- <navigator url="/pages/goods-details/index?id={{item.id}}"><image class="img" mode="aspectFill" src="{{item.rentImage?imageUrl+item.rentImage:defalutImage}}"></image></navigator>
+    <view class="goods-info">
+      <view class="title ellipsis"><navigator url="/pages/goods-details/index?id={{item.id}}">{{item.rentNumber}}</navigator></view>
+      <view class="price">¥ {{item.isNegotiable?'面议':item.rentPrice}}</view>
+      <view class="buy-info">
+        <view class="num">{{item.rentDesc?item.rentDesc:'无描述'}}</view>
+        <image class="car" src="/images/icon/car.svg" data-id="{{item.id}}" bindtap="addShopCar"></image>
+      </view>
+    </view> -->
+    <van-card
+        num="1"
+        tag="{{item.rentStatus == 'Y' ? '出租中':''}}"
+        price="{{item.isNegotiable?'面议':item.rentPrice}}"
+        desc="{{item.rentDesc?item.rentDesc:'无描述'}}"
+        title="车位号:{{item.rentNumber}}"
+        thumb="{{item.rentImage?imageUrl+item.rentImage:defalutImage}}"
+      >
+       <view slot="tags">
+                        <view wx:if="{{item.rentStatus == 'Y'}}">
+                            <van-tag plain type="success">正在出租</van-tag>
+                        </view>
+                        <view wx:else>
+                            <van-tag plain type="danger">已经出租</van-tag>
+                        </view>
+        </view>
+        <view slot="footer">
+          <van-button round  type="warning" size="small" bind:click="sendMessage" data-value="{{item.userId}}">联系出租者</van-button>
+        </view>
+      </van-card>
+  </view>
+</block>
+<block  wx:if="{{ total == 0 }}"><view class="list-nodata" >暂无数据</view></block>
+
+
+
+<!-- 留言弹窗 -->
+  <van-popup
+    show="{{ showMessage }}" 
+    bind:close="onClose"
+    position="bottom"
+    custom-style="height: 70%;"
+    round
+    closeable
+  >
+    <!-- 提交留言 -->
+    <form bindsubmit="onConfirm">
+      <view class="writeView">
+        <van-cell title="请留言"/>
+        <view class="textArea">
+          <textarea
+            value="{{messageValue}}"
+            style="height: 10em" 
+            placeholder="请输入给对方的留言(留下您的微信或者其他联系方式" 
+            placeholder-style="color:gray;"
+            name="message"
+            bindinput='getMessageValue'/>
+        </view>
+      </view>
+      <view class='submitBtnView'>
+        <button type="primary" formType="submit" plain="true" bindtap="subReply">提交留言</button>
+      </view>
+    </form>
+  </van-popup>

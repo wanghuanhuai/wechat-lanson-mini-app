@@ -1,0 +1,81 @@
+<!-- <view class="filters">
+  <view class="item {{orderBy==''?'active':''}}" data-val="" bindtap="filter">未读</view>
+  <view class="item {{orderBy=='addedDown'?'active':''}}" data-val="addedDown" bindtap="filter">已读</view>
+</view> -->
+<wxs module="diaplayTime" src="../../utils/timeUtil.wxs"></wxs>
+<!-- 留言内容 -->
+<van-skeleton
+  title
+  avatar
+  row="3"
+  loading="{{loading}}"
+>
+  <!-- 普通板块 -->
+  <block  wx:if="{{ total >0 }}" wx:for="{{msgList}}" wx:key="id" >
+    <view class="msgContent">
+      <!-- 头像部分 -->
+      <view class="imgView">
+        <image src = "{{item.toUser.wechatUser.avatarUrl}}" class = "headImg"></image>
+      </view>
+      <!-- 内容部分 -->
+      <view class='msgText'>
+        <view class = 'nameView'>
+          <view>
+            <text class='nameText'>{{item.toUser.wechatUser.nickName}}</text>
+          </view>
+          <!-- 时间 -->
+          <view>
+          <text class='timeText'>{{diaplayTime.diaplayTime(item.createdDate)}}</text>
+          </view>
+        </view>
+        <view class="right-content">
+        <view>
+           <image class="right-Avatar padding_half" src="{{apiUserInfoMap.avatarUrl}}"></image>
+        </view>
+            <view class="right-Triangle"></view>
+            <view class="right-message padding_half">
+             <text> {{item.message}}</text>  
+            </view>
+        </view>
+      </view>
+    </view>
+    <!-- 按钮部分 -->
+    <view class = "manageBtn" >
+     <van-button size="mini" square  type="primary" bindtap="modify" data-msgId='{{item.id}}' data-msgValue='{{item.message}}' data-nickName='{{item.toUser.wechatUser.nickName}}' data-index='{{index}}'>修改</van-button>
+      <van-button size="mini" type="danger" square  bindtap='delete' data-msgId='{{item.id}}'  data-index="{{index}}">删除</van-button>
+    </view>
+  </block>
+  <block  wx:if="{{ total == 0 }}"><view class="list-nodata" >暂无数据</view></block>
+  
+
+</van-skeleton>
+
+
+<!-- 留言弹窗 -->
+  <van-popup
+    show="{{ showMessage }}" 
+    bind:close="onClose"
+    position="bottom"
+    custom-style="height: 70%;"
+    round
+    closeable
+  >
+    <!-- 提交留言 -->
+    <form bindsubmit="onConfirm">
+      <view class="writeView">
+        <van-cell title="to {{nickName}}"/>
+        <view class="textArea">
+          <textarea
+            value="{{messageValue}}"
+            style="height: 10em" 
+            placeholder="请输入给对方的留言(留下您的微信或者其他联系方式" 
+            placeholder-style="color:gray;"
+            name="message"/>
+        </view>
+      </view>
+      <view class='submitBtnView'>
+        <button type="primary" formType="submit" plain="true" >提交留言</button>
+      </view>
+    </form>
+  </van-popup>
+

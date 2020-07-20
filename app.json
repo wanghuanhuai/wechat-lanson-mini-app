@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/notice/index",
+    "pages/notice/show",
+    "pages/my/index",
+    "pages/park/park-add",
+    "pages/park/list",
+    "pages/sap/index",
+    "pages/my-park/index",
+    "pages/my-message/index",
+    "pages/be-continued/index"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "车位信息",
+    "navigationBarTextStyle": "black",
+    "onReachBottomDistance": 50
+  },
+  "tabBar": {
+    "color": "#6e6d6b",
+    "selectedColor": "#108ee9",
+    "borderStyle": "black",
+    "backgroundColor": "#FFFFFF",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/nav/index-off.png",
+        "selectedIconPath": "images/nav/index-on.png",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/sap/index",
+        "iconPath": "images/nav/SAP-off.png",
+        "selectedIconPath": "images/nav/SAP-on.png",
+        "text": "SAP"
+      },
+      {
+        "pagePath": "pages/my/index",
+        "iconPath": "images/nav/user-off.png",
+        "selectedIconPath": "images/nav/user-on.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "navigateToMiniProgramAppIdList": [
+    "wx6d3067e255b2d21b"
+  ],
+  "plugins": {
+    "wxparse": {
+      "version": "1.0.10",
+      "provider": "wx5d60c080635009b1"
+    }
+  },
+  "usingComponents": {
+    "float-menu": "/components/float-menu/index"
+  },
+  "sitemapLocation": "sitemap.json"
+}

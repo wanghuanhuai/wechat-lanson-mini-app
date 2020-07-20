@@ -1,0 +1,141 @@
+.leaveBtn{
+  width: 90%;
+  height: 100rpx;
+  margin:5%;
+  margin-bottom: 2%;
+}
+.filters {
+  width: 100vw;
+  height: 88rpx;
+  background: #fff;
+  display: flex;
+  justify-content: space-around;
+}
+.filters .item {
+  line-height: 88rpx;
+}
+.filters .active {
+  color:#fa1e26;
+}
+.manageBtn{
+  display: flex;
+  justify-content: space-around;  
+  margin-bottom: 2%;
+}
+.imgView{
+  width: 15%
+}
+.headImg{
+  width: 70rpx;
+  height: 70rpx;
+  margin:20rpx;
+}
+.msgContent{
+  display: flex;
+  justify-content: center;  
+  width: 100%;
+  border-top: 1rpx solid #eee;
+  margin-bottom: 10rpx;
+}
+.msgText{
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 20rpx;
+  word-wrap:break-word;
+}
+.nameView{
+  display: flex;
+  justify-content:space-between;
+}
+.nameText{
+  color:gray;
+  font-weight: 300;
+  font-size: 30rpx;
+  margin-right: 15rpx;
+  margin-bottom: 3rpx;
+}
+.timeText{
+  color:gray;
+  font-weight: 300;
+  font-size: 25rpx;
+  margin-right: 15rpx;
+  margin-bottom: 3rpx;
+}
+.goodCount{
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  font-size:30rpx;
+  color:lightslategray;
+}
+.delectView{
+  margin-left: 5rpx;
+  margin-right: 5rpx;
+  font-size: 25rpx;
+  color: gray;
+}
+.replyView{
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  word-wrap:break-word;
+}
+.wordWrap {
+  position: absolute;
+  right: 12rpx;
+  bottom: 12rpx;
+}
+
+.right-Avatar{
+    float:right;
+    width: 70rpx;
+    height: 70rpx;
+  }
+.right-Triangle{
+    float:right;
+    margin-top: 35rpx;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-left: 12px solid rgb(152,255,101);
+    border-bottom: 8px solid transparent;
+}
+.right-content{
+  margin-top: 10rpx;
+  flex-direction: row-reverse;
+  display: flex;
+}
+.right-message{
+    margin-top: 10rpx;
+    line-height: 65rpx;
+    background: rgb(152,255,101);
+    border-radius: 10rpx;
+    font-size: 12px;
+}
+
+.left-Avatar{
+    width: 85rpx;
+    height: 85rpx;
+}
+.left-Triangle{
+    margin-top: 35rpx;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-right: 12px solid rgb(152,255,101);
+    border-bottom: 8px solid transparent;
+}
+.left-message{
+    float: left;
+    margin-top: 10rpx;
+    line-height: 65rpx;
+    background: rgb(152,255,101);
+    border-radius: 10rpx;
+    font-size: 12px;
+}
+.padding_half{
+  padding: 10rpx;
+}
+.submitBtnView {
+  margin:5%;
+}

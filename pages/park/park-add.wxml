@@ -1,0 +1,68 @@
+
+
+<view class="container">
+<view class="page">
+  <view class="page__bd">
+    <form bindsubmit="bindSave">
+    <view class="weui-cells weui-cells_after-title">    
+      <view class="weui-cell ">
+        <view class="weui-cell__hd">
+          <view class="weui-label">出租车位名</view>
+        </view>
+        <view class="weui-cell__bd">
+          <input name="rentNumber" class="weui-input" type="number" placeholder="例如:001" placeholder-class="weui-input__placeholder" value="{{rentInfo.rentNumber}}" />
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">价格面议</view>
+        </view>
+        <view class="weui-cell__bd">
+            <switch name="isNegotiable" bindchange="switchChange" checked="{{rentInfo.isNegotiable}}"/>
+        </view>
+      </view>
+      
+ <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">出租价格</view>
+        </view>
+        <view class="weui-cell__bd">
+            <input name="rentPrice" class="weui-input" type="number" placeholder="请添加价格或者勾选面议" placeholder-class="weui-input__placeholder" disabled="{{isNegotiable}}" value="{{rentInfo.rentPrice}}"/>
+        </view>
+      </view>
+
+       <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">车位图片</view>
+        </view>
+        <view class="weui-cell__bd">
+          <van-uploader
+            max-count="1"
+            max-size="10485760"
+            file-list="{{ fileList }}"
+            bind:after-read="afterRead">
+            <van-button icon="photo" type="primary">点击上传</van-button>
+          </van-uploader>
+        </view>
+      </view>
+      <view class="weui-cell">
+        <view class="weui-cell__hd">
+          <view class="weui-label">车位描述</view>
+        </view>
+        <view class="weui-cell__bd">
+       <textarea  name="rentDesc" class="weui-textarea" placeholder="车位描述(非不填)" auto-height rows="1" value="{{rentInfo.rentDesc}}"></textarea>
+        </view>
+      </view>
+    <input name="rentImage" value="{{rentImage}}" hidden="true"></input>
+        <input name="id" value="{{rentInfo.id}}" hidden="true"></input>
+        <input name="version" value="{{rentInfo.version}}" hidden="true"></input>
+        <input name="rentStatus" value="{{rentInfo.rentStatus}}" hidden="true"></input>
+
+    </view>
+    <view class="weui-btn-area">
+      <button type="primary" class="save-btn" formType="submit">保存</button>
+    </view>
+    </form>
+  </view>
+</view>
+</view>

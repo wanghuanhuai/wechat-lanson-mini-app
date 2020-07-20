@@ -1,0 +1,19 @@
+<!-- <navigator wx:for="{{noticeList}}" wx:key="id" url="/pages/notice/show?id={{item.id}}">
+  <view class='cashlogs'>
+    <view class='profile'>
+      <view class='typeStr'>{{item.title}}</view>
+      <view class='dateAdd'>{{ item.dateAdd }}</view>
+    </view>
+    <view class='amount'> 查看 > </view>
+  </view>
+</navigator> -->
+
+<navigator  url="/pages/notice/show">
+  <view class='cashlogs'>
+    <view class='profile'>
+      <view class='typeStr'>朗盛国际小程序正式系统上线</view>
+      <view class='dateAdd'>2020-07-08</view>
+    </view>
+    <view class='amount'> 查看 > </view>
+  </view>
+</navigator>

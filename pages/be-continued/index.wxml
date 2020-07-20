@@ -1,0 +1,21 @@
+<!--pages/be-continued/index.wxml-->
+<van-panel title="页面未开放" desc="{{desc}}" status="未完成">
+  <view>
+  <van-notice-bar
+  text="请等待后续的开发。"
+/>
+</view>
+<view class="weui-cell">
+              <van-button type="danger" bind:click ="getQRCode">条形码        </van-button>
+</view>
+<!--<van-image
+  fit="contain"
+  width="20rem"
+  height="20rem"
+  src="{{sapImageUrl}}"
+/>-->
+
+</van-panel>
+<image src="/images/test/image.png" class='imagesize' mode='widthFix' bindtap='previewImage'> </image>
+
+<!--<image src="{{sapImageUrl}}" class='imagesize' mode='widthFix' bindtap='previewImage'> </image> -->

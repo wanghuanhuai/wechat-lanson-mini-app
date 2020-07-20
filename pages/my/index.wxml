@@ -1,0 +1,81 @@
+<import src="/template/login/index.wxml" />
+
+<view class="container">
+	<view wx:if="{{apiUserInfoMap.avatarUrl}}" class="userinfo">
+		<image wx:if="{{apiUserInfoMap.avatarUrl}}" class="userinfo-avatar" src="{{ apiUserInfoMap.avatarUrl }}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{ apiUserInfoMap.nickName }}</text>
+	</view>
+  <view wx:else class="userinfo" style="margin-bottom:50rpx;">
+		<image class="userinfo-avatar" src="/images/nologin.png" background-size="cover"></image>
+		<button class="weui-btn mini-btn" plain="true" size="mini" bindtap="goLogin">立即登录</button>
+	</view>
+  <view class="asset">
+      <navigator url="/pages/my-message/index">
+        <view class='item' >
+          <view>{{myMessage}}</view>
+          <view>我的权限</view>
+        </view>
+     </navigator>
+    <navigator url="/pages/my-park/index">
+      <view class='item right'>
+        <view>{{myPark}}</view>
+        <view>我的审核</view>
+      </view>
+     </navigator>
+    <navigator url="/pages/be-continued/index">
+      <view class='item right'>
+        <view>0</view>
+        <view>我的请求</view>
+      </view>
+    </navigator>
+  </view>
+  <view class="space"></view>
+    <!-- <view class="menu-item" bindtap='goMyCar' data-type="0">
+      <view class="l">我的车位</view>
+      <image class="next" src="/images/icon/next.png"></image>
+    </view>
+  <view class="line"></view>
+  <view class='order-shortcut'>
+    <view class='item' bindtap='goMyCar' data-type="0">
+      <image class="icon" src="/images/car/car_item_all.png" background-size="cover"></image>
+      <view class='text'>全部</view>
+    </view>
+    <view class='item' bindtap='goMyCar' data-type="1">
+      <image class="icon" src="/images/car/car_item_renting.png" background-size="cover"></image>
+      <view class='text'>出租中</view>
+    </view>
+        <view class='item' bindtap='goMyCar' data-type="2">
+      <image class="icon" src="/images/car/car_item_rented.png" background-size="cover"></image>
+      <view class='text'>已出租</view>
+    </view>
+    <view class='item' bindtap='goMyCar' data-type="3">
+      <image class="icon" src="/images/car/car_item_down.png" background-size="cover"></image>
+      <view class='text'>已下架</view>
+    </view>
+  </view> -->
+  <view class="line"></view>
+  <navigator url="/pages/my-message/index">
+    <view class="menu-item">
+      <view class="l">个人信息</view>
+      <image class="next" src="/images/icon/next.png"></image>
+    </view>
+  </navigator>
+  <view class="line"></view>
+  <view wx:if="{{apiUserInfoMap.avatarUrl}}" class="menu-item" bindtap="loginOut">
+    <view class="l">退出登录</view>
+    <image class="next" src="/images/icon/next.png"></image>
+  </view>
+  <view wx:else class="menu-item" bindtap="goLogin">
+    <view class="l">授权登录</view>
+    <image class="next" src="/images/icon/next.png"></image>
+  </view>
+
+  <!-- <view class="line"></view>
+  <view class="menu-item">
+    <view class="l">绑定官网账号</view>
+    <image class="next" src="/images/icon/next.png"></image>
+  </view> -->
+  
+</view>
+
+<template is="apifmLogin" data="{{wxlogin: wxlogin}}" />
