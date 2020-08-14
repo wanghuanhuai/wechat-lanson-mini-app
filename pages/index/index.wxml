@@ -66,16 +66,21 @@
   />
   <van-grid-item
     icon="/images/app/scan_barcode.png"
-    text="采购单扫码"
-    bind:click="codeSearch"
+    text="光学采购单"
+    bind:click="GXPOSearch"
+  />
+  <van-grid-item
+    icon="/images/app/scan_barcode.png"
+    text="老花采购单"
+    bind:click="LHPOSearch"
   />
   <van-grid-item
     icon="/images/app/write_car_info.png"
-    link-type="navigateTo"
-    url="/pages/be-continued/index"
+    url="/pages/sap/mater/stock/list"
+    link-type = "navigateTo"
     text="待开放"
   />
-
+<!-- 
    <van-grid-item
     icon="/images/app/scan_barcode.png"
     text="XX单扫码查询"
@@ -85,6 +90,6 @@
     icon="/images/app/scan_barcode.png"
     text="XX单扫码查询"
     bind:click="codeSearch"
-  />
+  /> -->
 
 </van-grid>

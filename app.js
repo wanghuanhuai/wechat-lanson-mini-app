@@ -1,5 +1,7 @@
 const CONFIG = require('config.js')
 const AUTH = require('utils/auth')
+import './libs/polyfill.js'
+global.Promise && (Promise = global.Promise)
 App({
   onLaunch: function() {
     const that = this;
@@ -54,6 +56,7 @@ App({
         wx.hideToast()
       }
     });
+
   },
   goStartIndexPage: function() {
     setTimeout(function() {

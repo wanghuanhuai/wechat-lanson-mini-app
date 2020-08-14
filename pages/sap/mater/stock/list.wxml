@@ -1,0 +1,30 @@
+<!--pages/sap/mater/stock/list.wxml-->
+<view class="button-top">
+  <van-divider contentPosition="center">查询数据如下:</van-divider>
+</view>
+<view class="table" >
+    <view class="tr thead" >
+      <view class="td">工厂代码</view>
+      <view class="td ">库存地点</view>
+      <view class="td">物料编码</view>
+      <view class="td ">物料名称</view>
+      <view class="td">自由库存数量</view>
+      <view class="td">销售库存数量</view>
+    </view>
+    <block wx:for="{{list}}" wx:key="*this">
+      <view class="tr">
+        <view class="td">{{item.werks}}</view>
+        <view class="td">{{item.lgort}}</view>
+        <view class="td">{{item.matnr}}</view>
+        <view class="td">{{item.sgt_SCAT}}</view>
+        <view class="td">{{item.kalab}}</view>
+        <view class="td">{{item.xskalab}}</view>
+      </view>
+    </block>
+      <block wx:if="{{ list.length === 0 }}">
+        <view class="no-data">{{materName}}:暂无库存数据</view>
+      </block>
+</view>
+<view class="button-top">
+<van-button type="primary" size="large" bind:click="materScan">重新扫描</van-button>
+</view>

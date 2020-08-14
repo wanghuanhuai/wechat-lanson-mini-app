@@ -10,19 +10,19 @@
 		<button class="weui-btn mini-btn" plain="true" size="mini" bindtap="goLogin">立即登录</button>
 	</view>
   <view class="asset">
-      <navigator url="/pages/my-message/index">
+      <navigator >
         <view class='item' >
-          <view>{{myMessage}}</view>
+          <view>0</view>
           <view>我的权限</view>
         </view>
      </navigator>
-    <navigator url="/pages/my-park/index">
+    <navigator >
       <view class='item right'>
-        <view>{{myPark}}</view>
+        <view>0</view>
         <view>我的审核</view>
       </view>
      </navigator>
-    <navigator url="/pages/be-continued/index">
+    <navigator >
       <view class='item right'>
         <view>0</view>
         <view>我的请求</view>
@@ -54,12 +54,21 @@
     </view>
   </view> -->
   <view class="line"></view>
-  <navigator url="/pages/my-message/index">
+  <navigator >
     <view class="menu-item">
       <view class="l">个人信息</view>
       <image class="next" src="/images/icon/next.png"></image>
     </view>
   </navigator>
+   <view class="line"></view>
+  <view wx:if="{{userMobile}}" class="menu-item">
+    <view class="l">绑定手机</view>
+    <view class="r">{{ userMobile }}</view>
+  </view>
+  <view  wx:else class="menu-item">
+    <view class="l">绑定手机</view>
+    <button type="primary" size="mini" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">立即绑定</button>
+  </view>
   <view class="line"></view>
   <view wx:if="{{apiUserInfoMap.avatarUrl}}" class="menu-item" bindtap="loginOut">
     <view class="l">退出登录</view>

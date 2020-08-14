@@ -1,0 +1,41 @@
+<!--pages/sd-sap/sales-volume/index.wxml-->
+<van-search
+  value="{{ value }}"
+  label="SAP客户代码"
+  placeholder="请输入客户代码(三位数,例如:110)"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+
+<view class="table" >
+    <view class="tr thead" >
+      <view class="td">客户代码</view>
+      <view class="td ">年份</view>
+      <view class="td">第一季度</view>
+      <view class="td ">第二季度</view>
+      <view class="td">第三季度</view>
+      <view class="td">第四季度</view>
+      <view class="td">总计</view>
+    </view>
+    <block wx:for="{{list}}" wx:key="*this">
+      <view class="tr">
+        <view class="td">{{item.kunnr}}</view>
+        <view class="td">{{item.year}}</view>
+        <view class="td">{{item.firstQuarterSales}}</view>
+        <view class="td">{{item.secondQuarterSales}}</view>
+        <view class="td">{{item.thirdQuarterSales}}</view>
+        <view class="td">{{item.fourthQuarterSales}}</view>
+        <view class="td">{{item.yearQuarterSales}}</view>
+      </view>
+    </block>
+      <block wx:if="{{ list.length === 0 }}">
+        <view class="no-data">暂无数据</view>
+      </block>
+  </view>
+<van-divider hairline />
+<view class="container">
+  <f2  id="wxf2" class="f2-chart" onInit="{{onInitChart}}" />
+</view>

@@ -9,7 +9,9 @@
     "pages/sap/index",
     "pages/my-park/index",
     "pages/my-message/index",
-    "pages/be-continued/index"
+    "pages/be-continued/index",
+    "pages/sd-sap/sales-volume/index",
+    "pages/sap/mater/stock/list"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -47,12 +49,7 @@
   "navigateToMiniProgramAppIdList": [
     "wx6d3067e255b2d21b"
   ],
-  "plugins": {
-    "wxparse": {
-      "version": "1.0.10",
-      "provider": "wx5d60c080635009b1"
-    }
-  },
+  "plugins": {},
   "usingComponents": {
     "float-menu": "/components/float-menu/index"
   },

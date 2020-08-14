@@ -49,7 +49,7 @@ const refreshTokenRequest = function refreshToken(){
       const refreshToken = wx.getStorageSync('refreshToken');
       wx.request({
         method: 'POST',
-         url: baseUrl + '/wx/token/refresh',
+         url: baseUrl + '/sap/token/refresh',
         header: {
           'content-type': 'application/x-www-form-urlencoded'
         },

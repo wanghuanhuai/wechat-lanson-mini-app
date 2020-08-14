@@ -12,6 +12,7 @@
       "van-tabs": "@vant/weapp/tabs/index",
       "van-sticky": "@vant/weapp/sticky/index",
       "van-grid": "../../miniprogram_npm/@vant/weapp/grid",
-      "van-grid-item": "../../miniprogram_npm/@vant/weapp/grid-item"
+      "van-grid-item": "../../miniprogram_npm/@vant/weapp/grid-item",
+      "van-divider": "@vant/weapp/divider/index"
   }
 }

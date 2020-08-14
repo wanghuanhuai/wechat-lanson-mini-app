@@ -6,33 +6,21 @@
 
 <van-sticky>
   <van-tabs >
-    <van-tab title="报表" >
-       <van-grid clickable column-num="4">
+    <van-tab title="图表" >
+    <van-divider contentPosition="center">功能如下</van-divider>
+      <view >
+         <van-grid clickable column-num="4">
                 <van-grid-item
-                  icon="/images/app/scan_barcode.png"
-                  text="报表1"
-                  bind:click="codeSearch"
-                />
-                <van-grid-item
-                  icon="/images/app/scan_barcode.png"
-                  text="报表2"
-                  bind:click="codeSearch"
-                />
-                <van-grid-item
-                  icon="/images/app/write_car_info.png"
-                  link-type="navigateTo"
-                  url="/pages/be-continued/index"
-                  text="报表3"
-                />
-                <van-grid-item
-                  icon="/images/app/scan_barcode.png"
-                  text="报表4"
-                  bind:click="codeSearch"
+                  icon="{{baseUrl}}/sapSerive/static/image/sales-volume.png"
+                  text="销售额查询"
+                  url="/pages/sd-sap/sales-volume/index"
+                  link-type = "navigateTo"
                 />
           </van-grid>
+       </view>
     </van-tab>
     <van-tab title="查询" >
-     <van-grid clickable column-num="4">
+     <!-- <van-grid clickable column-num="4">
                 <van-grid-item
                   icon="/images/app/scan_barcode.png"
                   text="查询1"
@@ -49,10 +37,10 @@
                   url="/pages/be-continued/index"
                   text="查询3"
                 />
-          </van-grid>
+          </van-grid> -->
     </van-tab>
      <van-tab title="操作" >
-          <van-grid clickable column-num="4">
+          <!-- <van-grid clickable column-num="4">
                 <van-grid-item
                   icon="/images/app/scan_barcode.png"
                   text="操作1"
@@ -69,7 +57,7 @@
                   url="/pages/be-continued/index"
                   text="操作3"
                 />
-          </van-grid>
+          </van-grid> -->
     </van-tab>
   </van-tabs>
 </van-sticky>

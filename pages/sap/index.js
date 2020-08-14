@@ -11,6 +11,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    baseUrl:baseUrl,
     pageNum: 1,
     pageSize: 10,
     msgList:[],
@@ -19,6 +20,7 @@ Page({
     active: 0,
     isRead:false,
     total:0,
+    chat1:'',
   },
 
   /**
@@ -224,6 +226,9 @@ Page({
       }});
    
   },
+  salesQuarter(){
+    console.log('111');
+  }
 
 
 })
