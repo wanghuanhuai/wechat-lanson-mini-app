@@ -1,0 +1,11 @@
+{
+  "navigationBarTitleText": "超级扫码枪",
+  "usingComponents": {
+    "van-loading": "@vant/weapp/loading/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-row": "@vant/weapp/row/index",
+    "van-col": "@vant/weapp/col/index",
+    "van-empty": "@vant/weapp/empty/index",
+    "van-divider": "@vant/weapp/divider/index"
+  }
+}

@@ -1,0 +1,63 @@
+<van-action-sheet
+        show="{{ show }}"
+        actions="{{ actions }}"
+        bind:close="onClose"
+        bind:select="onSelect"
+      />
+
+<van-popup show="{{ yearshow }}" bind:close="onYearClose" position="bottom" round>
+  <van-picker   title="年份" columns="{{ columns }}" bind:confirm="onYearConfirm"   bind:cancel="onYearCancel" show-toolbar  default-index="{{defualtYearIndex}}"/>
+</van-popup>
+
+<van-sticky>
+  <van-dropdown-menu>
+    <van-dropdown-item value="{{ defaultValue }}" options="{{ option1 }}" bind:change="onChangeType"/>
+    <van-dropdown-item id="item" title="{{ itemTitle }}">
+      <van-cell title="业务部门" is-link value="{{deptName}}" arrow-direction="down" clickable	bind:click="onOpenSheet" />
+      <van-cell title="统计年份" is-link value="{{year}}" arrow-direction="down" clickable	bind:click="onOpenYear" />
+      <view class="dropdown-buttton">
+        <van-button  type="info" round block bind:click="onSearch">
+        确定
+      </van-button>
+      </view>
+    
+    </van-dropdown-item>
+  </van-dropdown-menu>
+</van-sticky>
+
+<van-divider
+  contentPosition="center"
+>
+  统计表格
+</van-divider>
+
+<view class="table" >
+    <view class="tr thead" >
+      <view class="td {{ defaultValue === 1?'td1':'dtd1' }}">月份</view>
+      <view  wx:if="{{ defaultValue === 1 }}" class="td {{ defaultValue === 1?'td2':'dtd2' }}">业务部门</view>
+      <view class="td {{ defaultValue === 1?'td3':'dtd3' }}">上年数量(万付)</view>
+      <view class="td {{ defaultValue === 1?'td4':'dtd4' }}">上年金额(万美元)</view>
+      <view class="td {{ defaultValue === 1?'td5':'dtd5' }}">本年数量(万付)</view>
+      <view class="td {{ defaultValue === 1?'td6':'dtd6' }}">本年数量(万美元)</view>
+      <view class="td {{ defaultValue === 1?'td7':'dtd7' }}">环比-数量</view>
+      <view class="td {{ defaultValue === 1?'td8':'dtd8' }}">环比-金额</view>
+      <view class="td {{ defaultValue === 1?'td9':'dtd9' }}">销售额增长率</view>
+    </view>
+    <block wx:for="{{list}}" wx:key="index">
+      <view class="tr">
+        <view class="td {{ defaultValue === 1?'td1':'dtd1' }}">{{item.audat}}</view>
+         <view  wx:if="{{ defaultValue === 1 }}" class="td {{ defaultValue === 1?'td2':'dtd2' }}">{{item.vkbur}}</view>
+        <view class="td {{ defaultValue === 1?'td3':'dtd3' }}">{{item.kwmeng1}}</view>
+        <view class="td {{ defaultValue === 1?'td4':'dtd4' }}">{{item.netwr1}}</view>
+        <view class="td {{ defaultValue === 1?'td5':'dtd5' }}">{{item.kwmeng2}}</view>
+        <view class="td {{ defaultValue === 1?'td6':'dtd6' }}">{{item.netwr2}}</view>
+        <view class="td {{ defaultValue === 1?'td7':'dtd7' }}">{{item.kwmeng}}</view>
+        <view class="td {{ defaultValue === 1?'td8':'dtd8' }}">{{item.netwr_sum2}}</view>
+        <view class="td {{ defaultValue === 1?'td9':'dtd9' }}">{{item.percent}}</view>
+      </view>
+    </block>
+      <block wx:if="{{ list.length === 0 }}">
+        <view class="no-data">暂无数据</view>
+      </block>
+  </view>
+<van-divider hairline />

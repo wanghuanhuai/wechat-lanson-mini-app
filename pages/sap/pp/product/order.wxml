@@ -1,0 +1,128 @@
+<!--pages/sap/pp/product/order.wxml-->
+<block wx:if="{{ !proOrderConf.rueck }}">
+    <van-empty image="error" description="找不到确认号{{confNo}}" />
+ </block>
+ <view class="top-buttton">
+  <van-button type="warning" block round  bind:click="barScan">扫条形码</van-button>
+</view>
+
+
+<block wx:if="{{ proOrderConf.rueck }}">
+<van-divider
+  contentPosition="center"
+>
+  确认信息
+</van-divider>
+
+<van-row>
+        <van-col span="12">
+           <van-cell-group>
+                    <van-field
+                              value="{{ proOrderConf.rueck}}"
+                              label="确认号:"
+                              type="textarea"
+                              autosize
+                              readonly/>
+                      <van-field
+                          value="{{ proOrderConf.matnr }}"
+                          label="物料编码:"
+                          type="textarea"
+                              autosize
+                          readonly/>
+                      <van-field
+                          value="{{ proOrderConf.ktsch }}"
+                          label="工序号:"
+                           type="textarea"
+                              autosize
+                          readonly/>
+                    <van-field
+                      value="{{ proOrderConf.arbid }}"
+                      label="工作中心代码:"
+                       type="textarea"
+                              autosize
+                      readonly/>
+                      <van-field
+                      value="{{ proOrderConf.werks }}"
+                      label="工厂代码:"
+                       type="textarea"
+                              autosize
+                      readonly/>
+              </van-cell-group>
+         </van-col>
+      <van-col span="12">
+             <van-cell-group>
+                   <van-field
+                              value="{{ proOrderConf.aufnr }}"
+                              label="订单号:"
+                               type="textarea"
+                              autosize
+                              readonly/>
+                      <van-field
+                          value="{{ proOrderConf.mwlmc }}"
+                          label="物料名称:"
+                          type="textarea"
+                           autosize
+                          readonly/>
+                      <van-field
+                      value="{{ proOrderConf.ltxa1 }}"
+                      label="工序名称:"
+                       type="textarea"
+                       autosize
+                      readonly/>
+                      <van-field
+                      value="{{ proOrderConf.ktext }}"
+                      label="工作中心名称:"
+                       type="textarea"
+                       autosize
+                      readonly/>
+                      <van-field
+                      value="{{ proOrderConf.wname }}"
+                      label="工厂名称:"
+                       type="textarea"
+                              autosize
+                      readonly/>
+              </van-cell-group>
+     
+      </van-col>
+</van-row>
+
+<van-cell-group>
+  <van-field
+    model:value="{{ gmnga }}"
+    required
+    clearable
+    label="产量数量"
+    icon="question-o"
+    type="number"
+    placeholder="请输入产量"
+    bind:click-icon="onClickIcon"
+  />
+    <van-field
+    model:value="{{ xmnga }}"
+    required
+    clearable
+    label="报废数量"
+    icon="question-o"
+    type="number"
+    placeholder="请输入报废数量"
+    bind:click-icon="onClickIcon"
+  />
+    <van-field
+    model:value="{{ rmnga }}"
+    required
+    clearable
+    label="返工数量"
+    icon="question-o"
+    type="number"
+    placeholder="请输入返工数量"
+    bind:click-icon="onClickIcon"
+  />
+
+</van-cell-group>
+
+
+ <view class="button-top">
+  <van-button type="primary"block round bind:click="onSubmit">提交</van-button>
+</view>
+</block>
+

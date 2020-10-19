@@ -1,0 +1,67 @@
+/* pages/sd-sap/sales-volume/index.wxss */
+
+.table {
+  margin: 5px;
+  border: 1px solid #ccc;
+  font-size: 28rpx;
+  background: #fff;  
+  border-right: none;
+}
+ 
+.tr{
+  display: flex;
+  justify-content: space-between;
+}
+ 
+.td {
+  font-size: 28rpx;
+  color: #666;
+  text-align: center;
+  border: 1px solid #ccc;
+  justify-content: center; 
+  border-left: none;
+  border-bottom: none;
+  padding: 1rpx;
+  word-wrap: break-word; 
+  text-overflow:ellipsis;
+}
+.td1,.td2,.td3,.td5,.td7{
+  width: 9%;
+ }
+ .td4,.td6,.td8,.td9{
+  width: 12.5%;
+ }
+ .dtd1,.dtd2,.dtd3,.dtd5,.dtd7{
+  width: 12%;
+ }
+ .dtd4,.dtd6,.dtd8,.dtd9{
+  width: 12%;
+ }
+
+ 
+.thead .td{
+  font-weight: bold;
+  border-top: none;
+  justify-content: center; 
+  background: #108ee9; 
+  color: #fff;
+  display: flex;
+  height: 4.5rem; 
+  align-items: center;
+}
+.no-data {
+  border: 1px solid #ccc;
+  display: inline-block;
+  border-left: none;
+  border-bottom: none;
+  display: flex;
+  padding: 50rpx;
+  color: #666;
+  justify-content: center;
+}
+.dropdown-buttton{
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+  padding-bottom: 10rpx;
+}

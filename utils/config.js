@@ -1,6 +1,6 @@
-const baseRequestHttp ='https://www.carafashion.cn';
+//const baseRequestHttp ='https://www.carafashion.cn';
 //const baseRequestHttp = 'http://116.62.6.120';
-//const baseRequestHttp = 'http://localhost:8860';
+const baseRequestHttp = 'http://localhost:8860';
 const config = {
   baseUrl: baseRequestHttp,
   imageUrl: baseRequestHttp+'/image/v1/file/view/',

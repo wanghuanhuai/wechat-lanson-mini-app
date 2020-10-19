@@ -52,33 +52,47 @@
     </view>                  
   </view>
 </view> -->
-
+<van-divider contentPosition="center">扫码查询</van-divider>
 <van-grid clickable column-num="4">
   <van-grid-item
     icon="/images/app/scan_barcode.png"
     text="物料查询扫码"
     bind:click="codeSearch"
+    data-type="code"
   />
   <van-grid-item
     icon="/images/app/scan_barcode.png"
     text="物料库存扫码"
     bind:click="materStockSearch"
+    data-type="code"
   />
   <van-grid-item
     icon="/images/app/scan_barcode.png"
     text="光学采购单"
     bind:click="GXPOSearch"
+    data-type="code"
   />
   <van-grid-item
     icon="/images/app/scan_barcode.png"
     text="老花采购单"
     bind:click="LHPOSearch"
+    data-type="code"
+  />
+<!-- url="/pages/sap/mater/detail/index" -->   
+ <van-grid-item
+    icon="/images/app/supuer-code.png"
+    bind:click="superCode"
+    text="超级扫码枪"
+  />
+   <van-grid-item
+    icon="/images/icon/job_book.png"
+    bind:click="jobBook"
+    text="扫码报工"
   />
   <van-grid-item
-    icon="/images/app/write_car_info.png"
-    url="/pages/sap/mater/stock/list"
+    icon="/images/app/to-be-continued.png"
     link-type = "navigateTo"
-    text="待开放"
+    text="敬请期待"
   />
 <!-- 
    <van-grid-item
@@ -92,4 +106,31 @@
     bind:click="codeSearch"
   /> -->
 
+</van-grid>
+<van-divider contentPosition="center">输入查询</van-divider>
+<van-grid clickable column-num="4">
+  <van-grid-item
+    icon="/images/app/mater.png"
+    text="物料查询"
+    bind:click="codeSearch"
+    data-type="form"
+  />
+  <van-grid-item
+    icon="/images/app/stock.png"
+    text="物料库存查询"
+    bind:click="materStockSearch"
+    data-type="form"
+  />
+  <van-grid-item
+    icon="/images/app/po.png"
+    text="光学采购单"
+    bind:click="GXPOSearch"
+    data-type="form"
+  />
+  <van-grid-item
+    icon="/images/app/po.png"
+    text="老花采购单"
+    bind:click="LHPOSearch"
+    data-type="form"
+  />
 </van-grid>

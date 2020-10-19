@@ -1,0 +1,42 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin-bottom: 30rpx;
+}
+
+.card {
+  width: 95%;
+  background-color: #fff;
+  margin: 20rpx auto 0;
+  border-radius: 20rpx !important;
+}
+.b-shadow {
+  box-shadow: 10rpx 10rpx 20rpx #999;
+}
+.van-cell{
+  padding-top:4px !important;
+  padding-bottom:4px !important;
+}
+.van-cell__title{
+  font-size: 27rpx !important;
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+  min-width: 40% !important;
+}
+
+.van-cell__value{
+  font-size: 27rpx !important;
+  padding-top:0px !important;
+  padding-bottom:0px !important;
+  min-width: 60% !important;
+}
+
+.row-card{
+  padding-top:5px;
+  padding-bottom:5px;
+}
+

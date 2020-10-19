@@ -4,6 +4,7 @@
   "usingComponents": {
       "van-grid": "../../miniprogram_npm/@vant/weapp/grid",
       "van-grid-item": "../../miniprogram_npm/@vant/weapp/grid-item",
-      "van-notice-bar": "../../miniprogram_npm/@vant/weapp/notice-bar/index"
+      "van-notice-bar": "../../miniprogram_npm/@vant/weapp/notice-bar/index",
+      "van-divider": "@vant/weapp/divider/index"
   }
 }

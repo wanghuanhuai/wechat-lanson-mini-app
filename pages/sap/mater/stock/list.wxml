@@ -1,4 +1,15 @@
 <!--pages/sap/mater/stock/list.wxml-->
+<van-search
+  value="{{ value }}"
+  label="物料"
+  placeholder="请输入查询的物料名称"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+  wx:if="{{type == 'form'}}"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
 <view class="button-top">
   <van-divider contentPosition="center">查询数据如下:</van-divider>
 </view>
@@ -25,6 +36,6 @@
         <view class="no-data">{{materName}}:暂无库存数据</view>
       </block>
 </view>
-<view class="button-top">
+<view class="button-top"  wx:if="{{type == 'code'}}">
 <van-button type="primary" size="large" bind:click="materScan">重新扫描</van-button>
 </view>

@@ -1,0 +1,84 @@
+
+
+<van-sticky>
+    <van-search
+      value="{{ searchValue }}"
+      label="销售单号"
+      placeholder="请输入搜索关键词"
+      use-action-slot
+      bind:change="onChange"
+      bind:search="onSearch"
+    >
+      <view slot="action" bind:tap="onClick">搜索</view>
+    </van-search>
+
+
+  <van-tabs  animated active="{{active}}" bind:change="onChangeTab">
+    <van-tab title="待审批" name="0" info="{{total}}"></van-tab>
+    <van-tab title="已审批" name="1"></van-tab>
+  </van-tabs>
+</van-sticky>
+
+
+ <view class='container'>
+  <block  wx:if="{{list !==null &&  list.length>0}}" wx:for="{{list}}" wx:key="vbeln" >
+  <view class='card b-shadow'>
+     <view class="row-card">
+      <van-row>
+        <van-col span="12"><van-cell center size='5px' title="销售单号:" value="{{item.vbeln}}"  /></van-col>
+        <van-col span="12"><van-cell center size='5px' title="PI号:" value="{{item.zpino}}"  /></van-col>
+      </van-row>
+      <van-row>
+        <van-col span="12"><van-cell center title="销售类型:" value="{{item.auart}}"  /></van-col>
+        <van-col span="12"><van-cell center title="创建日期:" value="{{item.erdat}}"  /></van-col>
+      </van-row>
+      <van-row>
+        <van-col span="12"><van-cell center title="审批日期:" value="{{item.cmfre}}"  /></van-col>
+          <van-col span="12"><van-cell center title="客户编号:" value="{{item.kunnr}}"  /></van-col>
+      </van-row>
+      
+       <van-row >
+          <van-cell center title="客户名称:" value="{{item.kunnr_t}}"  />
+      </van-row>
+      <van-row>
+        <van-col span="12"><van-cell center title="订单数量:" value="{{item.kwmeng}}"  /></van-col>
+        <van-col span="12"><van-cell center title="订单金额:" value="{{item.netwr}}"  /></van-col>
+      </van-row>
+      <van-row>
+        <van-col span="12"><van-cell center title="货币:" value="{{item.waerk}}"  />
+        </van-col>
+        <van-col span="12"><van-cell center title="业务部门:" value="{{item.vkbur}}"  />
+          </van-col>
+      </van-row>
+      <van-row>
+        <van-col span="12"><van-cell center title="国家:" value="{{item.landx}}"  /></van-col>
+        <van-col span="12"><van-cell center title="出口国:" value="{{item.zckg}}"  /></van-col>
+      </van-row>
+      <van-row>
+        <van-col span="24"><van-cell center title="描述:" value="{{item.arktx}}"  /></van-col>
+      </van-row>  
+      <van-row>
+        <van-col span="24">
+          <van-steps steps="{{ steps }}" active="{{ item.level-1 }}" />
+        </van-col>
+      </van-row>
+        <van-row>
+         <van-col span="24" wx:if="{{appraveStatus == 'A'}}"><van-button type="primary" bind:click="apprave"  round block data-vbeln="{{item.vbeln}}" data-level="{{item.level}}" data-indexdel="{{index}}">同意</van-button>
+        </van-col>
+        <van-col span="24"  wx:if="{{appraveStatus == 'C'}}"><van-button type="danger" bind:click="back"  round block data-vbeln="{{item.vbeln}}" data-level="{{item.level}}" data-indexdel="{{index}}">取消</van-button>
+        </van-col> 
+      </van-row>
+      </view>
+  </view>
+ </block> 
+   <block  wx:if="{{   list.length == 0 }}"><view class="list-nodata" >暂无审核订单</view></block>
+
+</view>
+
+
+<van-toast id="van-toast" />
+
+  
+
+
+

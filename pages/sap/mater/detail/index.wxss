@@ -1,0 +1,10 @@
+/* pages/sap/mater/detail/index.wxss */
+.cell-title{
+  font-weight:bold !important;
+}
+.cell-left{
+  text-align:left !important;
+}
+.button-top{
+  margin: 5px;
+}

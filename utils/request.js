@@ -105,7 +105,7 @@ function refreshToken( options){
   if (!isRefreshing) {
       isRefreshing = true;
     refreshTokenRequest().then(data => {
-
+     
         if(data){
             requests.forEach(function (item, index) {
               reConnectRequest(item).then(data => {
@@ -115,7 +115,8 @@ function refreshToken( options){
               });
             });
         }else{
-          const res = { statusCode : '401'};
+          const res = { statusCode : 401};
+          console.info('res:'+res)
           requests.forEach(function (item, index) {
             item.reject(res);
           });
@@ -134,6 +135,7 @@ function refreshToken( options){
 
 
 const request = function request(header,url, data = {}, method = "GET") {
+    var error = false;
     return new Promise(function (resolve, reject) {
       const token = wx.getStorageSync('token');
       var baseHeader = {};
@@ -177,9 +179,10 @@ const request = function request(header,url, data = {}, method = "GET") {
       })
     }).catch(res =>{
       console.warn("catch:"+res)
+      error=true;
       if (res.statusCode) { 
         const status = res.statusCode;
-        if (status == '401') {
+        if (status == 401) {
               wx.hideLoading(); 
           //token
          // refreshToken(res); 
@@ -224,7 +227,14 @@ const request = function request(header,url, data = {}, method = "GET") {
         })
       }
       }).finally(() =>{
-        wx.hideLoading(); 
+        //console.log('error:'+error)
+        if(error){
+          setTimeout(function () {
+            wx.hideLoading(); 
+           }, 2500) //延迟时间 这里是1秒
+        }else{
+          wx.hideLoading(); 
+        }
       });
   }
 

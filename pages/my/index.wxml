@@ -61,9 +61,9 @@
     </view>
   </navigator>
    <view class="line"></view>
-  <view wx:if="{{userMobile}}" class="menu-item">
+  <view wx:if="{{mobile}}" class="menu-item">
     <view class="l">绑定手机</view>
-    <view class="r">{{ userMobile }}</view>
+    <view class="r">{{ mobile }}</view>
   </view>
   <view  wx:else class="menu-item">
     <view class="l">绑定手机</view>

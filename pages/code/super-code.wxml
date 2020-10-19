@@ -1,0 +1,17 @@
+<!--pages/code/super-code.wxml-->
+<view wx:if="{{isConnect}}">
+    <view class='main'>
+      <van-loading color="#108ee9" size="70px" text-size="16px" vertical>与桌面应用(soketId={{soketId}})连接中....</van-loading>
+   </view>
+   <van-divider />
+   <view class="button-top">
+    <van-button type="primary" size="large" bind:click="barScan">开始扫描条码</van-button>
+  </view>
+</view>
+<view wx:else>
+    <van-empty image="error" description="连接桌面应用失败,请返回主页重新扫描二维码。" />
+</view>
+
+
+
+

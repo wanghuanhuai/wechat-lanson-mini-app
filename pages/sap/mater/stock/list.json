@@ -2,6 +2,7 @@
   "navigationBarTitleText": "物料库存查询",
   "usingComponents": {
     "van-button": "@vant/weapp/button/index",
-    "van-divider": "@vant/weapp/divider/index"
+    "van-divider": "@vant/weapp/divider/index",
+    "van-search": "@vant/weapp/search/index"
   }
 }

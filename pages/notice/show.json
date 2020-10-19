@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "公告详情",
   "usingComponents": {
-    "wxparse": "plugin://wxparse/wxparse"
+    "van-panel": "@vant/weapp/panel/index",
+    "van-divider": "@vant/weapp/divider/index"
   }
 }

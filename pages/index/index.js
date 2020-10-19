@@ -109,83 +109,222 @@ Page({
       url: '../notice/show',
     })
   },
-  codeSearch(){
+  codeSearch(event){
     var _this = this;
-    wx.scanCode({
-      scanType: ['barCode'],        //扫描API
-      success: function (res) {
-       // console.log(res);    //输出回调信息
-        //console.log(fileList);
-        // _this.setData({
-        //   qRCodeMsg: res.result
-        // });
-
-        if( res.result){
-          wx.showLoading({
-            title: '数据加载中！',
-          });
+    const type=event.currentTarget.dataset.type;
+    if(type && type == 'code'){
+      wx.scanCode({
+        scanType: ['barCode'],        //扫描API
+        success: function (res) {
           const codeMsg= res.result;
-             //下载并打开文件
-        wx.downloadFile({
-          // url: baseUrl +"/sap/mater/"+res.result,
-         //  url: baseUrl +"/sap/v1/mater/1AF130928A01", //真机测试用的
-           url: baseUrl +"/sap/v1/mater/"+codeMsg, //真机测试用的
-           success: function (res) {
-            console.log(res)
-             if(res.statusCode == '200'){
-              var filePath = res.tempFilePath              //返回的文件临时地址，用于后面打开本地预览所用
-              // console.log(postf1)
-              if (filePath != null) {
-                wx.openDocument({
-                  filePath: filePath,
-                  fileType: 'xlsx',
-                  success: function (res) {
-                    console.log(res)
-                  },
-                  fail: function (res) {
-                    console.log(res);
-                  },
-                  complete:function(){
-                   wx.hideLoading();
-                 }
-                })
-              }
-             }else{
-              wx.showToast({
-                title: '查询失败或者物料不存在:'+codeMsg,
+          wx.navigateTo({
+            url: '/pages/sap/mater/detail/index?materName='+codeMsg+'&type='+type,
+          })
+        },
+         fail: function (res) {
+               wx.showToast({
+                title: '扫描失败,请重新尝试',
                 icon: 'none'
               })
-             }
-      
-          
-           },
-           fail: function (res) {
-             console.log(res)
-             wx.showToast({
-              title: '打开失败,请重新尝试',
-              icon: 'none'
-            })
-           },
-         })
-        }      
-       },
-      fail: function(err){
-        console.log(err)
-        wx.showToast({
-          title: '扫描失败,条形码错误',
-          icon: 'none'
-        })
-      }
-    })
+             },
+      })
+    }
+    if(type && type == 'form'){
+      wx.navigateTo({
+        url: '/pages/sap/mater/detail/index?type='+type,
+      })
+    }
+ 
   },
-  materStockSearch(){
 
+  materStockSearch(event){
+
+
+    var _this = this;
+    const type=event.currentTarget.dataset.type;
+    if(type && type == 'code'){
+      wx.scanCode({
+        scanType: ['barCode'],        //扫描API
+        success: function (res) {
+          const codeMsg= res.result;
+          wx.navigateTo({
+            url: '/pages/sap/mater/stock/list?materName='+codeMsg+'&type='+type,
+          })
+        },
+         fail: function (res) {
+               wx.showToast({
+                title: '扫描失败,请重新尝试',
+                icon: 'none'
+              })
+             },
+      })
+    }
+    if(type && type == 'form'){
+      wx.navigateTo({
+        url: '/pages/sap/mater/stock/list?type='+type,
+      })
+    }
+  },
+  //光学采购单
+  GXPOSearch(event){
+    var _this = this;
+    const type=event.currentTarget.dataset.type;
+    //直接扫码start
+    if(type && type == 'code'){
+      wx.scanCode({
+        scanType: ['barCode'],        //扫描API
+        success: function (res) {
+  
+          if( res.result){
+            wx.showLoading({
+              title: '数据加载中！',
+            });
+            const codeMsg= res.result;
+               //下载并打开文件
+          wx.downloadFile({
+            // url: baseUrl +"/sap/mater/"+res.result,
+            // url: baseUrl +"/sap/v1/order/gx/"+res.result, //真机测试用的
+            url: baseUrl +"/sap/v1/order/gx/"+res.result,
+             success: function (res) {
+               if(res.statusCode == '200'){
+                var filePath = res.tempFilePath              //返回的文件临时地址，用于后面打开本地预览所用
+                // console.log(postf1)
+                if (filePath != null) {
+                  wx.openDocument({
+                    filePath: filePath,
+                    fileType: 'xlsx',
+                    success: function (res) {
+                    },
+                    fail: function (res) {
+                    },
+                    complete:function(){
+                     wx.hideLoading();
+                   }
+                  })
+                }
+               }else{
+                wx.showToast({
+                  title: '查询失败:'+codeMsg,
+                  icon: 'none'
+                })
+               }
+        
+            
+             },
+             fail: function (res) {
+               console.log(res)
+               wx.showToast({
+                title: '打开失败,请重新尝试',
+                icon: 'none'
+              })
+             },
+           })
+          }      
+         },
+        fail: function(err){
+          console.log(err)
+          wx.showToast({
+            title: '扫描失败,条形码错误',
+            icon: 'none'
+          })
+        }
+      })
+    }//直接扫码end
+     //进入查询页面
+     if(type && type == 'form'){
+      wx.navigateTo({
+        url: '/pages/sap/po/gxpo?type=gx',
+      })
+    }
+
+  },
+  LHPOSearch(event){
+    var _this = this;
+    const type=event.currentTarget.dataset.type;
+    //直接扫码start
+    if(type && type == 'code'){
+      wx.scanCode({
+        scanType: ['barCode'],        //扫描API
+        success: function (res) {
+  
+          if( res.result){
+            wx.showLoading({
+              title: '数据加载中！',
+            });
+            const codeMsg= res.result;
+               //下载并打开文件
+          wx.downloadFile({
+            // url: baseUrl +"/sap/mater/"+res.result,
+            // url: baseUrl +"/sap/v1/order/lh/7000044586", //真机测试用的
+            url: baseUrl +"/sap/v1/order/lh/"+res.result,
+            success: function (res) {
+               if(res.statusCode == '200'){
+                var filePath = res.tempFilePath              //返回的文件临时地址，用于后面打开本地预览所用
+                // console.log(postf1)
+                if (filePath != null) {
+                  wx.openDocument({
+                    filePath: filePath,
+                    fileType: 'xlsx',
+                    success: function (res) {
+                    },
+                    fail: function (res) {
+                    },
+                    complete:function(){
+                     wx.hideLoading();
+                   }
+                  })
+                }
+               }else{
+                wx.showToast({
+                  title: '查询失败:'+codeMsg,
+                  icon: 'none'
+                })
+               }
+        
+            
+             },
+             fail: function (res) {
+               console.log(res)
+               wx.showToast({
+                title: '打开失败,请重新尝试',
+                icon: 'none'
+              })
+             },
+           })
+          }      
+         },
+        fail: function(err){
+          console.log(err)
+          wx.showToast({
+            title: '扫描失败,条形码错误',
+            icon: 'none'
+          })
+        }
+      })
+    }//直接扫码end
+     //进入查询页面
+     if(type && type == 'form'){
+      wx.navigateTo({
+        url: '/pages/sap/po/gxpo?type=lh',
+      })
+  }
+},
+  //超级扫码枪
+  superCode(){
+    var _this = this;
     wx.scanCode({
-      scanType: ['barCode'],        //扫描API
+      scanType: ['qrCode'],        //扫描API
       success: function (res) {
         const codeMsg= res.result;
+        console.log('codeMsg:'+codeMsg);
         wx.navigateTo({
-          url: '/pages/sap/mater/stock/list?materName='+codeMsg,
+          url: codeMsg,
+          fail:function(){
+            wx.showToast({
+              title: '二维码错误，无法进行正确的页面跳转',
+              icon: 'none'
+            })
+          }
         })
       },
        fail: function (res) {
@@ -195,129 +334,10 @@ Page({
             })
            },
     })
- 
   },
-  //光学采购单
-  GXPOSearch(){
-    var _this = this;
-    wx.scanCode({
-      scanType: ['barCode'],        //扫描API
-      success: function (res) {
-
-        if( res.result){
-          wx.showLoading({
-            title: '数据加载中！',
-          });
-          const codeMsg= res.result;
-             //下载并打开文件
-        wx.downloadFile({
-          // url: baseUrl +"/sap/mater/"+res.result,
-          // url: baseUrl +"/sap/v1/order/gx/"+res.result, //真机测试用的
-          url: baseUrl +"/sap/v1/order/gx/"+res.result,
-           success: function (res) {
-             if(res.statusCode == '200'){
-              var filePath = res.tempFilePath              //返回的文件临时地址，用于后面打开本地预览所用
-              // console.log(postf1)
-              if (filePath != null) {
-                wx.openDocument({
-                  filePath: filePath,
-                  fileType: 'xlsx',
-                  success: function (res) {
-                  },
-                  fail: function (res) {
-                  },
-                  complete:function(){
-                   wx.hideLoading();
-                 }
-                })
-              }
-             }else{
-              wx.showToast({
-                title: '查询失败:'+codeMsg,
-                icon: 'none'
-              })
-             }
-      
-          
-           },
-           fail: function (res) {
-             console.log(res)
-             wx.showToast({
-              title: '打开失败,请重新尝试',
-              icon: 'none'
-            })
-           },
-         })
-        }      
-       },
-      fail: function(err){
-        console.log(err)
-        wx.showToast({
-          title: '扫描失败,条形码错误',
-          icon: 'none'
-        })
-      }
-    })
-  },
-  LHPOSearch(){
-    var _this = this;
-    wx.scanCode({
-      scanType: ['barCode'],        //扫描API
-      success: function (res) {
-
-        if( res.result){
-          wx.showLoading({
-            title: '数据加载中！',
-          });
-          const codeMsg= res.result;
-             //下载并打开文件
-        wx.downloadFile({
-          // url: baseUrl +"/sap/mater/"+res.result,
-          // url: baseUrl +"/sap/v1/order/lh/7000044586", //真机测试用的
-          url: baseUrl +"/sap/v1/order/lh/"+res.result,
-          success: function (res) {
-             if(res.statusCode == '200'){
-              var filePath = res.tempFilePath              //返回的文件临时地址，用于后面打开本地预览所用
-              // console.log(postf1)
-              if (filePath != null) {
-                wx.openDocument({
-                  filePath: filePath,
-                  fileType: 'xlsx',
-                  success: function (res) {
-                  },
-                  fail: function (res) {
-                  },
-                  complete:function(){
-                   wx.hideLoading();
-                 }
-                })
-              }
-             }else{
-              wx.showToast({
-                title: '查询失败:'+codeMsg,
-                icon: 'none'
-              })
-             }
-      
-          
-           },
-           fail: function (res) {
-             console.log(res)
-             wx.showToast({
-              title: '打开失败,请重新尝试',
-              icon: 'none'
-            })
-           },
-         })
-        }      
-       },
-      fail: function(err){
-        console.log(err)
-        wx.showToast({
-          title: '扫描失败,条形码错误',
-          icon: 'none'
-        })
-      }
+  jobBook(){
+    wx.navigateTo({
+      url: '/pages/sap/pp/product/order',
     })
   }
 })

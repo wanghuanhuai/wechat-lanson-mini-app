@@ -13,6 +13,8 @@ Page({
     wxlogin: true,
     myMessage:0,
     myPark:0,
+    mobile:null,
+    apiUserInfoMap:{}
   },
 	onLoad() {
 	},	
@@ -27,8 +29,17 @@ Page({
     AUTH.checkHasLogined().then(isLogined => {
       this.setData({
         wxlogin: isLogined
-      })   
-      _this.getUserApiInfo();
+      }) 
+      if(isLogined){
+        _this.getUserApiInfo();
+        _this.getMobile();
+      }else{
+        AUTH.clearToken();
+        _this.setData({
+          mobile:null,
+          apiUserInfoMap:{}
+        })
+      }  
     //  _this.getCount();
     })
   },
@@ -101,6 +112,45 @@ Page({
           }
           
         })
+      }
+    })
+  },
+  getPhoneNumber: function(e) {
+    if (!e.detail.errMsg || e.detail.errMsg != "getPhoneNumber:ok") {
+      wx.showModal({
+        title: '提示',
+        content: e.detail.errMsg,
+        showCancel: false
+      })
+      return;
+    }
+    const data={
+      encryptedData:e.detail.encryptedData,
+      iv:e.detail.iv
+    }
+      request(null,'/sap/v1/user/mobile',data,'PUT').then(data =>{
+        if(data && data.result == 'ok'){
+          console.log(data.data.mobile);
+          this.setData({
+            mobile:data.data.mobile
+          })
+        }else{
+          wx.showModal({
+            title: '提示',
+            content:'手机绑定失败!',
+            showCancel: false
+          })
+        }
+      })
+  },
+  getMobile(){
+    request(null,'/sap/v1/user/mobile',null,'GET').then(data =>{
+      if(data && data.result == 'ok' ){
+        if(data.data){
+          this.setData({
+            mobile:data.data.mobile
+          })
+        }
       }
     })
   }

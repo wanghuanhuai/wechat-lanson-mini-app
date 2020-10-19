@@ -1,0 +1,8 @@
+/* pages/sap/po/gxpo.wxss */
+.po-top{
+  margin-top: 100px;
+}
+
+.button-top{
+  margin: 5px;
+}

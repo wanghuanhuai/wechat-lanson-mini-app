@@ -11,7 +11,13 @@
     "pages/my-message/index",
     "pages/be-continued/index",
     "pages/sd-sap/sales-volume/index",
-    "pages/sap/mater/stock/list"
+    "pages/sap/mater/stock/list",
+    "pages/sap/mater/detail/index",
+    "pages/code/super-code",
+    "pages/sap/po/gxpo",
+    "pages/sd-sap/apprave/list",
+    "pages/sap/order/report",
+    "pages/sap/pp/product/order"
   ],
   "window": {
     "backgroundTextStyle": "light",

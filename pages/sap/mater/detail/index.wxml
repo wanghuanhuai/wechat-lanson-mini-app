@@ -1,0 +1,96 @@
+<!--pages/sap/mater/detail/index.wxml-->
+<van-search
+  value="{{ value }}"
+  label="物料"
+  placeholder="请输入查询的物料名称"
+  use-action-slot
+  bind:change="onChange"
+  bind:search="onSearch"
+  wx:if="{{type == 'form'}}"
+>
+  <view slot="action" bind:tap="onClick">搜索</view>
+</van-search>
+<van-divider
+  contentPosition="center"
+  customStyle="color: #000000;font-size: 17px;font-weight:bold"
+  wx:if="{{type == 'code'}}">
+  物料信息
+</van-divider>
+<block wx:if="{{ !mater.matnr }}">
+    <van-empty image="error" description="{{materName}}:查询物料不存在" />
+ </block>
+<block wx:if="{{ mater.matnr }}">
+    <van-cell-group   >
+      <van-cell center title-class="cell-title"  title-width="150rpx" value-class="cell-left" title="物料编码" value="{{mater.matnr}}" />
+      <view hidden="{{!mater.mlhds}}">
+            <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="老花度数" value="{{mater.mlhds}}"   />
+      </view>
+      <view hidden="{{!mater.mgcxh}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="工厂型号" value="{{mater.mgcxh}}"  />
+      </view>
+      <view hidden="{{!mater.mbz}}">
+        <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="备注" value="{{mater.mbz}}"  />
+      </view>  
+      <view hidden="{{!mater.bismt}}">
+        <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="旧物料编码" value="{{mater.bismt}}"  />
+      </view>
+      <view hidden="{{!mater.mwlmc}}">
+          <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="物料名称" value="{{mater.mwlmc}}"  />
+      </view>    
+     <view hidden="{{!mater.mmmtj}}">
+       <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="瞳距" value="{{mater.mmmtj}}"  />
+     </view> 
+     <view hidden="{{!mater.mmmmsz}}">
+      <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="描述-中" value="{{mater.mmmmsz}}"  />
+     </view>
+     <view hidden="{{!mater.maktx}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="物料描述" value="{{mater.maktx}}"  />
+     </view>
+     <view hidden="{{!mater.mggcc}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="印字尺寸" value="{{mater.mggcc}}"  />
+     </view>
+	 <view hidden="{{!mater.mmmjp}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="镜片" value="{{mater.mmmjp}}"  />
+     </view>
+	 <view hidden="{{!mater.mmmsy}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="描述-英" value="{{mater.mmmsy}}"  />
+     </view>
+	 <view hidden="{{!mater.mklgg}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="开料规格" value="{{mater.mklgg}}"  />
+     </view>
+	 <view hidden="{{!mater.meins}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="单位" value="{{mater.meins}}"  />
+     </view>
+	 <view hidden="{{!mater.mmcsm}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="厂色码" value="{{mater.mmcsm}}"  />
+     </view>
+	 <view hidden="{{!mater.mkhks}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="客户款式名称" value="{{mater.mkhks}}"  />
+     </view>
+	 <view hidden="{{!mater.mgg}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="规格" value="{{mater.mgg}}"  />
+     </view>
+	 <view hidden="{{!mater.khynd}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="款号难易度" value="{{mater.khynd}}"  />
+     </view>
+	 <view hidden="{{!mater.mksdm}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="客色代码" value="{{mater.mksdm}}"  />
+     </view>
+	 <view hidden="{{!mater.mkhxh}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="客户型号" value="{{mater.mkhxh}}"  />
+     </view>
+	 <view hidden="{{!mater.mwlgg}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="upc条码" value="{{mater.mwlgg}}"  />
+     </view><view hidden="{{!mater.kunnr}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="客户代码" value="{{mater.kunnr}}"  />
+     </view>
+	 <view hidden="{{!mater.matkl}}">
+         <van-cell center title-class="cell-title" title-width="150rpx" value-class="cell-left"	title="物料组" value="{{mater.wgbez}}"  />
+     </view>
+	
+    </van-cell-group>
+ </block>
+ <view class="button-top" wx:if="{{type == 'code'}}">
+  <van-button type="primary" size="large" bind:click="materScan">重新扫描</van-button>
+</view>
+

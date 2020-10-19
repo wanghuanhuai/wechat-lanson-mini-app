@@ -1,14 +1,14 @@
 const { default: request } = require("../../../../utils/request");
 
-// pages/sap/mater/stock/list.js
+// pages/sap/mater/detail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    mater:{},
     materName:'',
-    list:[],
     type:'code',
     value: '',
   },
@@ -29,19 +29,23 @@ Page({
   loadData(){
     const materName=this.data.materName;
     if(materName){
+      wx.setNavigationBarTitle({
+        title: materName,
+      })
       // 获取数据
       wx.showLoading({
         title: '加载中',
       })
-      request(null,'/sap/v1/mater/stock/'+materName, null, 'GET').then(data => {
+      request(null,'/sap/v1/mater/'+materName, null, 'GET').then(data => {
           if(data.result){
-              this.setData({
-                list:data.data
-            }); 
+           //  console.log(data.data);
+             this.setData({
+               mater:data.data
+             })
           }else{
             this.setData({
-              list:[]
-          }); 
+              mater:{}
+            })
             wx.showToast({
               title:data,
               icon:'none'
@@ -51,6 +55,7 @@ Page({
     }
    
   },
+
   materScan(){
     var _this=this;
     wx.scanCode({
@@ -93,5 +98,4 @@ Page({
      this.loadData();
   },
   
-
 })

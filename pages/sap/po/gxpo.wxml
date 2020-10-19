@@ -1,0 +1,18 @@
+<!--pages/sap/po/gxpo.wxml-->
+<view class="po-to">
+  <van-cell-group>
+    <van-field
+      required
+      clearable
+      label="采购单号"
+      icon="question-o"
+      placeholder="请输入采购单号"
+      value="{{ value }}"
+      bind:change="onChange"
+    />
+  </van-cell-group>
+</view>
+<view class="button-top" >
+  <van-button type="primary"  bind:click="poSearch" block>查询</van-button>
+</view>
+

@@ -1,253 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9e8e6f1a-bd52-4c89-ae6a-7796ef9785bf" name="Default Changelist" comment="修改成小程序页面">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/wechat-lanson-mini-app.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/polyfill.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/apifm-wxapi/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/index/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/index/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/index/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/index/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/poster/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/poster/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/poster/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/poster/index.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxa-plugin-canvas/poster/poster.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxbarcode/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/miniprogram_npm/wxbarcode/index.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sap/mater/stock/list.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sap/mater/stock/list.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sap/mater/stock/list.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sap/mater/stock/list.wxss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sd-sap/sales-volume/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sd-sap/sales-volume/index.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sd-sap/sales-volume/index.wxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pages/sd-sap/sales-volume/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.json" beforeDir="false" afterPath="$PROJECT_DIR$/app.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/app.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/car/car_item_all.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/car/car_item_down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/car/car_item_rented.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/car/car_item_renting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/car.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/close.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/close0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/coupons-active.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/coupons-empty.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/coupons-off.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/delete.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/edit.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/fav0.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/fav1.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/go-l.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/go-r.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/kf.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/pos-gray.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/shop-on.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/icon/shop.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/test/image.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@antv/adjust/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@antv/adjust/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@antv/f2/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@antv/f2/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@antv/gl-matrix/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@antv/gl-matrix/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@antv/scale/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@antv/scale/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/@antv/util/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/@antv/util/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/fecha/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/fecha/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/hammerjs/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/hammerjs/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/jwt-decode/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/jwt-decode/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/regenerator-runtime/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/regenerator-runtime/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/miniprogram_npm/tslib/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/miniprogram_npm/tslib/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/index/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/index/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/my/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/my/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sap/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sap/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sap/index.json" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sap/index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sap/index.wxml" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sap/index.wxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages/sap/index.wxss" beforeDir="false" afterPath="$PROJECT_DIR$/pages/sap/index.wxss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project.config.json" beforeDir="false" afterPath="$PROJECT_DIR$/project.config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/typings/wx.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/config.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/request.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/request.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/fn.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/fn.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/mobile.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/mobile.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/setArrow.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/setArrow.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/setOnepx.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/setOnepx.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/text.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/mixin/text.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-dot-loading.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-dot-loading.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-form.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-form.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-gallery.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-gallery.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-loadmore.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-loadmore.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-navigation-bar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-navigation-bar.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-searchbar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-searchbar.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-slideview.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-slideview.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-uploader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/patch/weui-uploader.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/reset.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/reset.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/fn.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/fn.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/index.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/index.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/vars/dark.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/vars/dark.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/vars/light.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/theme/vars/light.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/color.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/color.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/global.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/global.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-button.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-button.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-cell.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-cell.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-dialog.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-dialog.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-grid.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-grid.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-msg.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-msg.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-progress.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-progress.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-tab.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/base/variable/weui-tab.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/icon/weui-icon.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/icon/weui-icon.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/weui.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/weui.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-agree/weui-agree.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-agree/weui-agree.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-animate/weui-animate.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-animate/weui-animate.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_cell.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_cell.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_default.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_default.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_disabled.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_disabled.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_global.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_global.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_loading.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_loading.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_plain.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_primary.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_primary.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_warn.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-btn_warn.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-button.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-button/weui-button.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-access.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-access.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cell.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cell_global.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cell_global.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cell_swiped.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cell_swiped.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cells__group.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-cells__group.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check/weui-check_common.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check/weui-check_common.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check/weui-checkbox.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check/weui-checkbox.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check/weui-radio.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-check/weui-radio.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-form-preview.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-form-preview.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-form_common.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-form_common.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-select.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-select.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-vcode.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-form/weui-vcode.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-gallery.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-gallery.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-slideview.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-switch.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-switch.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-uploader.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-cell/weui-uploader.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-flex/weui-flex.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-flex/weui-flex.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-footer/weui-footer.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-footer/weui-footer.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-grid/weui-grid.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-grid/weui-grid.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-icon/weui-icon.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-loading/weui-dot-loading.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-loading/weui-loading.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-loading/weui-loading.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-media-box/weui-media-box.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-media-box/weui-media-box.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-navigation-bar/weui-navigation-bar.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-page/weui-article.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-page/weui-article.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-page/weui-form.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-page/weui-form.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-page/weui-msg.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-page/weui-msg.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-panel/weui-panel.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-panel/weui-panel.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-picker/weui-picker.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-picker/weui-picker.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-progress/weui-progress.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-progress/weui-progress.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-searchbar/weui-searchbar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-searchbar/weui-searchbar.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-slider/weui-slider.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-slider/weui-slider.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tab/weui-navbar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tab/weui-navbar.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tab/weui-tab.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tab/weui-tab.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tab/weui-tabbar.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tab/weui-tabbar.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-text/weui-link.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-text/weui-link.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-actionsheet.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-actionsheet.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-badge.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-badge.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-dialog.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-dialog.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-half-screen-dialog.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-half-screen-dialog.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-loadmore.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-loadmore.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-mask.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-mask.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-toast.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-toast.wxss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-toptips.less" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/weui/widget/weui-tips/weui-toptips.wxss" beforeDir="false" />
-    </list>
+    <list default="true" id="9e8e6f1a-bd52-4c89-ae6a-7796ef9785bf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -279,6 +42,17 @@
             <path>
               <item name="wechat-lanson-mini-app" type="b2602c69:ProjectViewProjectNode" />
               <item name="wechat-lanson-mini-app" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechat-lanson-mini-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechat-lanson-mini-app" type="462c0819:PsiDirectoryNode" />
+              <item name="miniprogram_npm" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="wechat-lanson-mini-app" type="b2602c69:ProjectViewProjectNode" />
+              <item name="wechat-lanson-mini-app" type="462c0819:PsiDirectoryNode" />
+              <item name="miniprogram_npm" type="462c0819:PsiDirectoryNode" />
+              <item name="jwt-decode" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -350,6 +124,9 @@
       </method>
     </configuration>
   </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="9e8e6f1a-bd52-4c89-ae6a-7796ef9785bf" name="Default Changelist" comment="" />
@@ -357,12 +134,29 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1597391094813</updated>
-      <workItem from="1597391097532" duration="241000" />
+      <workItem from="1597391097532" duration="851000" />
     </task>
+    <task id="LOCAL-00001" summary="修改成小程序页面">
+      <created>1597391348174</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597391348174</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="241000" />
+    <option name="totallyTimeSpent" value="851000" />
+  </component>
+  <component name="TodoView" selected-index="4">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
@@ -370,7 +164,7 @@
       <window_info id="JRebel" side_tool="true" />
       <window_info id="Capture Tool" />
       <window_info id="Image Layers" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.30964053" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30964053" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="UI Designer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -384,7 +178,7 @@
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info active="true" anchor="bottom" id="TODO" order="6" visible="true" weight="0.08402367" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.3147929" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Messages" order="9" weight="0.18468468" />

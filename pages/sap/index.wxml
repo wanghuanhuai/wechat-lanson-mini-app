@@ -9,11 +9,17 @@
     <van-tab title="图表" >
     <van-divider contentPosition="center">功能如下</van-divider>
       <view >
-         <van-grid clickable column-num="4">
+         <van-grid clickable column-num="3">
                 <van-grid-item
                   icon="{{baseUrl}}/sapSerive/static/image/sales-volume.png"
                   text="销售额查询"
                   url="/pages/sd-sap/sales-volume/index"
+                  link-type = "navigateTo"
+                />
+                <van-grid-item
+                  icon="/images/icon/order_report.png"
+                  text="销售订单统计(光学)"
+                  url="/pages/sap/order/report"
                   link-type = "navigateTo"
                 />
           </van-grid>
@@ -40,24 +46,17 @@
           </van-grid> -->
     </van-tab>
      <van-tab title="操作" >
-          <!-- <van-grid clickable column-num="4">
+    <van-divider contentPosition="center">功能如下</van-divider>
+      <view >
+         <van-grid clickable column-num="4">
                 <van-grid-item
-                  icon="/images/app/scan_barcode.png"
-                  text="操作1"
-                  bind:click="codeSearch"
+                  icon="/images/icon/order-apprave.png"
+                  text="销售订单审核"
+                  url="/pages/sd-sap/apprave/list"
+                  link-type = "navigateTo"
                 />
-                <van-grid-item
-                  icon="/images/app/scan_barcode.png"
-                  text="操作2"
-                  bind:click="codeSearch"
-                />
-                <van-grid-item
-                  icon="/images/app/write_car_info.png"
-                  link-type="navigateTo"
-                  url="/pages/be-continued/index"
-                  text="操作3"
-                />
-          </van-grid> -->
+          </van-grid>
+       </view>
     </van-tab>
   </van-tabs>
 </van-sticky>

@@ -52,7 +52,8 @@ async function checkHasLogined() {
   
   const loggined = await checkSession()
   if (!loggined) {
-    wx.removeStorageSync('token')
+    wx.removeStorageSync('token');
+    wx.removeStorageSync('refreshToken');
     return false
   }
   return true
@@ -306,7 +307,16 @@ async function checkAndAuthorize (scope) {
     })
   })  
 }
-
+function clearToken() {
+  const token = wx.getStorageSync('token');
+  wx.removeStorageSync('token');
+  wx.removeStorageSync('refreshToken');
+  request(null, '/auth/user/logout', { token: token }, 'POST').then(data => {
+    console.log(data);
+    if (data) {
+    }
+  });
+}
 
 module.exports = {
   checkHasLogined: checkHasLogined,
@@ -317,5 +327,6 @@ module.exports = {
   loginOut: loginOut,
   checkAndAuthorize: checkAndAuthorize,
   isLogin: isLogin,
-  getUserId: getUserId
+  getUserId: getUserId,
+  clearToken:clearToken,
 }

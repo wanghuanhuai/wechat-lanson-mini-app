@@ -5,9 +5,9 @@
   </view>
 </view> -->
 
- <view class="notice">
-  <view class="title">朗盛国际小程序查询系统上线</view>
-  <view class="text">
-    <wxparse data="朗盛国际小程序查询系统上线,若有任何建议，可联系管理员"></wxparse>
-  </view>
-</view>
+
+
+<van-panel title="朗盛ERP" >
+<van-divider />
+  <view class="notice">朗盛国际小程序查询系统上线,若有任何建议，可联系管理员</view>
+</van-panel>

@@ -1,0 +1,11 @@
+/* pages/code/super-code.wxss */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  width: 100%;
+  height: 100%;
+}
+.button-top{
+  margin: 5px;
+}
